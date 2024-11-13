@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ask</title>
+    <link rel="stylesheet" href="./../static/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a class="navbar-brand" href="./index.html">AskMe</a>
+                <button class="btn btn-outline-success" type="submit"><a href="./ask.html" style="text-decoration: none;">Ask!</a></button>
+            </div>
+
+            <form role="search">
+                <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
+            <div class="d-flex gap-3">
+                <a href="./login.html">Log In</a>
+                <a href="./signup.html">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid">
+        <h1>New Question</h1>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="container">
+                    <form class="d-flex flex-column gap-3">
+                        <div id="error-message" class="alert alert-danger" role="alert">
+                            Incorrect question
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="questionTitle" class="form-label">Title</label>
+                            </div>
+                            <div class="col-10">
+                                <input type="text" class="form-control" id="questionTitle" placeholder="Enter question title" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="questionBody" class="form-label">Text</label>
+                            </div>
+                            <div class="col-10">
+                                <textarea class="form-control" id="questionBody" rows="5" placeholder="Describe your question" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="questionTags" class="form-label">Tags</label>
+                            </div>
+                            <div class="col-10">
+                                <input type="text" class="form-control" id="questionTags" placeholder="Add tags (comma separated)" required>
+                            </div>
+                        </div>
+                
+                        <button type="submit" class="btn btn-primary">Ask!</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="d-flex flex-column gap-3">
+                    <div>
+                        <h2>Popular Tags</h2>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#" class="badge bg-primary text-decoration-none">HTML</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-secondary text-decoration-none">CSS</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-success text-decoration-none">JavaScript</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-danger text-decoration-none">Python</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-warning text-decoration-none">React</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-info text-decoration-none">Vue.js</a></li>
+                            <li class="list-inline-item"><a href="#" class="badge bg-dark text-decoration-none">Node.js</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Best Members</h2>
+                        <ul style="list-style-type: none; padding: 0;" class="d-flex flex-column gap-1">
+                            <li class="list-group-item d-flex justify-content-between align-items-center"><a href="#">Member</a></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center"><a href="#">Member</a></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center"><a href="#">Member</a></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center"><a href="#">Member</a></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center"><a href="#">Member</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./../static/js/bootstrap.js"></script>
+</body>
+</html>
